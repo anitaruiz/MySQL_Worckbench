@@ -13,3 +13,15 @@ END $$
 
 
 SELECT * from alquileres;
+
+-- 2
+DELIMITER $$
+CREATE TRIGGER actualizar_num_empleados
+AFTER INSERT ON empleados
+FOR EACH ROW
+BEGIN
+UPDATE tiendas
+SET num_empleados = num_empleados + 1
+WHERE tienda_id = NEW.tienda_id;
+END$$
+DELIMITER ;
