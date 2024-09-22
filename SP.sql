@@ -55,6 +55,7 @@ END$$
 
 CALL detalle_alquileres_cliente(35);
 
+-- 3
 
 DELIMITER $$
 CREATE PROCEDURE detalles_pelicula_alquilada (IN pelicula INT)
